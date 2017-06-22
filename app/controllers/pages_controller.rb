@@ -14,6 +14,7 @@ class PagesController < ApplicationController
     end
 
     def batman_vs_superman
-        @votos_batman = VotosSuperman.all
+        @votos_batman   = VotosBatman.all
+        @votos_superman = VotosSuperman.all
     end
 end

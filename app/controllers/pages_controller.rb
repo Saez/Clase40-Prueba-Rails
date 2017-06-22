@@ -4,12 +4,16 @@ class PagesController < ApplicationController
     end
 
     def save_votos_batman
-        VotosBatman.create(name: params[:name], email: params[:email])
+        if params[:name].present? &&  params[:email].present?
+            VotosBatman.create(name: params[:name], email: params[:email])
+        end
         redirect_to root_path, notice: "El voto fue guardado correctamente"
     end
 
     def save_votos_superman
-        VotosSuperman.create(name: params[:name], email: params[:email])
+        if params[:name].present? &&  params[:email].present?
+            VotosSuperman.create(name: params[:name], email: params[:email])
+        end
         redirect_to root_path, notice: "El voto fue guardado correctamente"
     end
 

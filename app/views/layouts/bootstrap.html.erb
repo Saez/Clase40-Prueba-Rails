@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Superheroes</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'bootstrap.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap.js', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="<%= "#{params[:controller]} #{params[:action]}" %>">
+    <div class="container">asdf
+        <%= yield %>
+    </div>
+</body>
+</html>
